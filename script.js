@@ -263,7 +263,7 @@ async function apiCall(path, method = "GET", body = null) {
     if (STATE.token) headers["Authorization"] = `Bearer ${STATE.token}`;
     const opts = { method, headers, credentials: "include" };
     if (body !== null) opts.body = JSON.stringify(body);
-    const res = await fetch(path, opts);
+    const res = await fetch(`https://onrender.com\({path}`, opts);
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.detail || "Ошибка сервера");
     return data;
