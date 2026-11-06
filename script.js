@@ -1,7 +1,7 @@
 /* ==========================================================================
    💎 STAKE 2011 v5.0 ULTRA • CLIENT ENGINE (12 GAMES + WEB AUDIO + PARTICLES + LIVE PVP)
    ========================================================================== */
-
+const port = process.env.PORT || 4000 
 const STATE = {
     token: localStorage.getItem("stake2011_token") || null,
     user: null,
